@@ -113,26 +113,18 @@ public class Populate {
 		String name = top.getName();
 		System.out.println(name);
 		
-		String[] bottoms = {a, b, c, d, e, f, g, h, i, j};
+		String bottom;		
+		int randBottom;
 		
-		String[] stringBott = {"blue skirt", "grey skirt", "blue pants", "checked pants"};
-		
-		String bottom;
-		
-
 		do{
-			int randBottom = getRandom(3);
-			bottom = stringBott[randBottom];
+			randBottom = getRandom(top.bottoms.length-1);
+			bottom = top.bottoms[randBottom];
 
-		}while (!(Arrays.asList(stringBott).contains(bottom)));
+		}while (!(Arrays.asList(top.bottoms).contains(bottom)));
 		
-		//Arrays.asList(top.bottoms).contains("blue skirt");
 
 		System.out.println(bottom);
 		
-		//print(topArray);
-		
-
 	}
 
 
