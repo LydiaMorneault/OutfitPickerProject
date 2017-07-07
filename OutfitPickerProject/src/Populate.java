@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class Populate {
 	public Top[] tops;
+	public String sweater;
+	public Bottom bottom;
 	
 	public static void print(Top[] printArray){
 		for (int i = 0; i < printArray.length; i++){
@@ -116,39 +118,33 @@ public class Populate {
 		
 		Bottom[] sssArray = {a, f, j};
 		String[] sssarray = {aa, bb, gg};
-		Top sss = new Top("teal feather", "tank", sssArray, empty);
+		Top sss = new Top("teal feather", "tank", sssArray, sssarray);
 		
 		Top ttt = new Top("polka dot", "long", dddArray, empty);
 		
 		Top[] tops = {aaa, bbb, ccc, ddd, eee, fff, ggg, hhh, iii, jjj, kkk, lll, mmm, nnn, ooo, ppp, qqq, rrr, sss, ttt};
 	
-		int randTop = getRandom(18);
+		int randTop = getRandom(tops.length);
 		Top top = tops[randTop];
 		String name = top.getName();
 		System.out.println(name);
-		
-		Bottom bottom;		
+				
 		int randBottom;
 		
-		do{
-			randBottom = getRandom(top.bottoms.length-1);
-			bottom = top.bottoms[randBottom];
-
-		}while (!(Arrays.asList(top.bottoms).contains(bottom)));
-		
+		randBottom = getRandom(top.bottoms.length);
+		bottom = top.bottoms[randBottom];
+	
 		int randSweater;
-		String sweater;
 		
-		do{
-			randSweater = getRandom(top.sweaters.length-1);
+		//System.out.println(top.sweaters.length);
+		
+		if(top.sweaters.length > 0){
+			randSweater = getRandom(top.sweaters.length);
 			sweater = top.sweaters[randSweater];
-
-		}while (!(Arrays.asList(top.sweaters).contains(sweater)));
-
-		System.out.println(sweater);
-
-
-		
+			//System.out.println(randSweater);
+			System.out.println(sweater);
+		}
+	
 		System.out.println(bottom.name);
 
 		

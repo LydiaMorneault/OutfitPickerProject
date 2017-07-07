@@ -11,7 +11,7 @@ public class Top {
 		sleeveLength = sleeve;
 		
 		bottoms = bottomArray;
-		String[] sweaters = sweaterArray;
+		sweaters = sweaterArray;
 		
 	}
 	
