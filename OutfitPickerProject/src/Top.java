@@ -3,10 +3,10 @@
 public class Top {
 	public String name;
 	public String sleeveLength;
-	public String[] bottoms = new String[9];
+	public Bottom[] bottoms = new Bottom[9];
 	public String[] sweaters = new String[6];
 	
-	public Top(String title, String sleeve, String[] bottomArray, String[] sweaterArray){		
+	public Top(String title, String sleeve, Bottom[] bottomArray, String[] sweaterArray){		
 		name = title;
 		sleeveLength = sleeve;
 		
@@ -24,7 +24,7 @@ public class Top {
 		return false;
 	}
 	
-	public String getOneBottom(int i){
+/*	public String getOneBottom(int i){
 		String bott = bottoms[i];
 		return bott;
 	}
@@ -40,5 +40,5 @@ public class Top {
 			return true;
 		}
 		return false;
-	}
+	}*/
 }
