@@ -37,15 +37,16 @@ public class Populate {
 		
 		// ********** SWEATERS ********** //
 		
-		Sweater aa = new Sweater("black blazer");
-		Sweater bb = new Sweater("burgundy");
-		Sweater cc = new Sweater("mustard");
-		Sweater dd = new Sweater("red");
-		Sweater ee = new Sweater("striped tan");
-		Sweater ff = new Sweater("teal");
+		String aa = "black blazer";
+		String bb = "burgundy";
+		String cc = "mustard";
+		String dd = "red";
+		String ee = "striped brown";
+		String ff = "teal";
+		String gg = "tan";
 		
 		// ********** TOPS ********** //
-		Sweater[] empty = {};
+		String[] empty = {};
 		
 		String[] aaaArray = {b, e, f, h, i, j};
 		Top aaa = new Top("black button tee", "tee", aaaArray, empty);
@@ -53,7 +54,7 @@ public class Populate {
 		Top bbb = new Top("black long sleeved", "long", aaaArray, empty);
 		
 		String[] cccArray = {a, f, i};
-		Sweater [] cccarray = {aa, cc, dd, ee};
+		String [] cccarray = {aa, cc, dd, ee, gg};
 		Top ccc = new Top("black with foxes", "tank", cccArray, cccarray);
 		
 		String[] dddArray = {c, f, g, h, j};
@@ -63,7 +64,7 @@ public class Populate {
 		Top eee = new Top("blue striped shirt", "long", eeeArray, empty);
 		
 		String[] fffArray = {d, g, j};
-		Sweater[] fffarray = {bb, cc, dd};
+		String[] fffarray = {bb, cc, dd, gg};
 		Top fff = new Top("blue striped tank", "tank", fffArray, fffarray);
 		
 		String[] gggArray = {d, f, g, j};
@@ -73,17 +74,17 @@ public class Populate {
 		Top hhh = new Top("green floral", "3/4", hhhArray, empty);
 		
 		String[] iiiArray = {a, c, f, h, i};
-		Sweater[] iiiarray = {aa, bb, cc, dd, ff};
+		String[] iiiarray = {aa, bb, cc, dd, ff, gg};
 		Top iii = new Top("Perry shirt", "tee", iiiArray, iiiarray);
 		
 		String[] jjjArray = {a, d, f, g, i, j};
 		Top jjj = new Top("pink floral shirt", "long", jjjArray, empty);
 		
-		Sweater[] kkkarray = {aa};
+		String[] kkkarray = {aa, gg};
 		Top kkk = new Top("pink floral tank", "tank", jjjArray, kkkarray);
 		
 		String[] lllArray = {b, c, d, e, f, g, j};
-		Sweater[] lllarray = {bb, ee};
+		String[] lllarray = {bb, ee, gg};
 		Top lll = new Top("mustard tank", "tank", lllArray, lllarray);
 		
 		String[] mmmArray = {d, e, f, g, i, j};
@@ -103,10 +104,12 @@ public class Populate {
 		Top rrr = new Top("white pirate sleeves", "3/4", pppArray, empty);
 		
 		String[] sssArray = {a, f, j};
-		Sweater[] sssarray = {aa, bb};
+		String[] sssarray = {aa, bb, gg};
 		Top sss = new Top("teal feather", "tank", sssArray, empty);
 		
-		Top[] tops = {aaa, bbb, ccc, ddd, eee, fff, ggg, hhh, iii, jjj, kkk, lll, mmm, nnn, ooo, ppp, qqq, rrr, sss};
+		Top ttt = new Top("polka dot", "long", dddArray, empty);
+		
+		Top[] tops = {aaa, bbb, ccc, ddd, eee, fff, ggg, hhh, iii, jjj, kkk, lll, mmm, nnn, ooo, ppp, qqq, rrr, sss, ttt};
 	
 		int randTop = getRandom(18);
 		Top top = tops[randTop];
@@ -122,8 +125,21 @@ public class Populate {
 
 		}while (!(Arrays.asList(top.bottoms).contains(bottom)));
 		
+		int randSweater;
+		String sweater;
+		
+		do{
+			randSweater = getRandom(top.sweaters.length-1);
+			sweater = top.sweaters[randSweater];
 
+		}while (!(Arrays.asList(top.sweaters).contains(sweater)));
+
+		System.out.println(sweater);
+
+
+		
 		System.out.println(bottom);
+
 		
 	}
 

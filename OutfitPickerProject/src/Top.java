@@ -4,13 +4,14 @@ public class Top {
 	public String name;
 	public String sleeveLength;
 	public String[] bottoms = new String[9];
+	public String[] sweaters = new String[6];
 	
-	public Top(String title, String sleeve, String[] bottomArray, Sweater[] sweaterArray){		
+	public Top(String title, String sleeve, String[] bottomArray, String[] sweaterArray){		
 		name = title;
 		sleeveLength = sleeve;
 		
 		bottoms = bottomArray;
-		Sweater[] sweaters = sweaterArray;
+		String[] sweaters = sweaterArray;
 		
 	}
 	
