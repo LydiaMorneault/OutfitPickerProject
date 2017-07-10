@@ -2,16 +2,18 @@
 
 public class Top {
 	public String name;
-	public String sleeveLength;
+	//public Boolean isShortSleeve;	// 1 if short sleeved, 0 if long sleeved
 	public Bottom[] bottoms = new Bottom[9];
 	public String[] sweaters = new String[6];
+	public String[] shoes = new String[6];
 	
-	public Top(String title, String sleeve, Bottom[] bottomArray, String[] sweaterArray){		
+	public Top(String title, Bottom[] bottomArray, String[] sweaterArray, String[] shoeArray){		
 		name = title;
-		sleeveLength = sleeve;
+		//isShortSleeve = new Boolean(sleeve);
 		
 		bottoms = bottomArray;
 		sweaters = sweaterArray;
+		shoes = shoeArray;
 		
 	}
 	
@@ -24,6 +26,12 @@ public class Top {
 		return false;
 	}
 	
+	
+/*	public boolean isSleeve(){
+		if(isShortSleeve)
+			return true;
+		return false;
+	}*/
 /*	public String getOneBottom(int i){
 		String bott = bottoms[i];
 		return bott;
